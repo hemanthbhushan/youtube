@@ -18,11 +18,11 @@ async function main () {
     const { chainId } = await ethers.provider.getNetwork();
 
 
-    let Impl = await ethers.getContractFactory("GeneralMP");
+    let Impl = await ethers.getContractFactory("TwoWayMP");
 
-        token = await Impl.deploy("0xBF62ef1486468a6bd26Dd669C06db43dEd5B849B", "0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6");
+        token = await Impl.deploy("0x4D147dCb984e6affEEC47e44293DA442580A3Ec0", "0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6");
         await token.deployed();
-        console.log("GMP", token.address);
+        console.log("TwoWayMP address: ", token.address);
 
   
 }
